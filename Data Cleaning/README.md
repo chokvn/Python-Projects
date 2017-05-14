@@ -8,17 +8,18 @@ The initial development of this tool has focused on
 the following procedure:
 1) Load dataset from csv
 2) Change column names according to how the user designates them
-3) Collect unique values (non-numerical) within each column for user to determine if values should be normalized or scaled
-4) Change all non-numerical values in column with user designated scale
+3) Collect unique values within each column for user to determine if values should be normalized or scaled
+4) Change all values in column with user designated scale
 5) Display a renaming key for non-numerical original value to new value
 6) Display the dataset prepped for data analysis
 
 As this is only an initial tool, there are plenty of implementations that are being developed. These include:
-1) Initially, imputing data by deletion of null-containing rows, for initial analysis
-2) A menu interface for repeating functions such as renaming column names
-3) Exporting resulting data tables and old:new dictionary for analysis outside of program
-4) Summarizing data by mean, mode, std dev, null count, etc.
-5) Recommend machine learning technique for classification based on accuracy in initial (impute by delete) cross validation
+1) VERY IMPORTANT: For data normalization, must implement code that does not include any pure numerical columns
+2) Initially, imputing data by deletion of null-containing rows, for initial analysis
+3) A menu interface for repeating functions such as renaming column names
+4) Exporting resulting data tables and old:new dictionary for analysis outside of program
+5) Summarizing data by mean, mode, std dev, null count, etc.
+6) Recommend machine learning technique for classification based on accuracy in initial (impute by delete) cross validation
 
 Down the road implementations are:
 1) Using "whole" data points in order to recommend best classifier for imputing null values
